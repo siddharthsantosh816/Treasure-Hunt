@@ -34,33 +34,31 @@ class Security {
         // Add code to make the buttons function as expected
 
         this.button1.mousePressed(() => {
-        var access1Val = this.access1.value();
-            if(system.authenticate(accessCode1[0],access1Val) ||(system.authenticate(accessCode1[1],access1Val))||(system.authenticate(accessCode1[2],access1Val))){
-                this.button1.hide();
-                this.access1.hide();
-                score++
-            }
+        var access1Val = this.access1.value().toUpperCase();
+        if(system.authenticate(accessCode1,access1Val)) {
+            this.button1.hide();
+            this.access1.hide();
+            score++
+        }
         });
  
 
         this.button2.mousePressed(() => {
-        var access2Val = this.access2.value();
-        if(system.authenticate(accessCode2[0],access2Val) ||(system.authenticate(accessCode2[1],access2Val))||(system.authenticate(accessCode2[2],access2Val))){
+        var access2Val = this.access2.value().toUpperCase();
+        if(system.authenticate(accessCode2,access2Val)) {
             this.button2.hide();
             this.access2.hide();
             score++
         }
-    }); 
+        }); 
 
         this.button3.mousePressed(() => {
-        var access3Val = this.access3.value();
-        if(system.authenticate(accessCode3[0],access3Val) ||(system.authenticate(accessCode3[1],access3Val))||(system.authenticate(accessCode3[2],access3Val))){
+        var access3Val = this.access3.value().toUpperCase();
+        if(system.authenticate(accessCode3,access3Val)) {
             this.button3.hide();
             this.access3.hide();
             score++
-        
-
         }
-    });
-}
+        });
+    }
 };

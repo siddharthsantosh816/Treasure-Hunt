@@ -1,6 +1,6 @@
-const accessCode1 = ["VARIABLE", "variable","Variable"];
-const accessCode2 = ["FUNCTION", "function","Function"];
-const accessCode3 = ["DATABASE", "database","Database"];
+const accessCode1 = "VARIABLE";
+const accessCode2 = "FUNCTION";
+const accessCode3 = "DATABASE";
 
 
 function clues() {
